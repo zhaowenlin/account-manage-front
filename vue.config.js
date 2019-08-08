@@ -51,7 +51,7 @@ module.exports = {
     'style-resources-loader': {
       preProcessor: 'scss',
       patterns: [
-        path.resolve(__dirname, 'src/assets/styles/config.scss'),
+        path.resolve(__dirname, 'src/assets/styles/index.scss'),
         path.resolve(__dirname, 'src/assets/styles/mixins.scss')
       ]
     }
