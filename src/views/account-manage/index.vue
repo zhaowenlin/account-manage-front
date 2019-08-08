@@ -8,14 +8,16 @@
  -->
 <template>
   <div class="admin">
-    <div>test: {{test}}</div>
+    <div>test: {{ test }}</div>
   </div>
 </template>
 
 <script>
 export default {
-  data: {
-    test: "hello"
+  data() {
+    return {
+      test: 'hello'
+    }
   }
 }
 </script>

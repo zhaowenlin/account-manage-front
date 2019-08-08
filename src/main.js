@@ -4,16 +4,12 @@ import Cookies from 'js-cookie'
 
 import 'normalize.css/normalize.css' // a modern alternative to CSS resets
 
-import './styles/element-variables.scss'
-
-import '@/styles/index.scss' // global css
-
 import {
   sync
 } from 'vuex-router-sync'
 import App from './App.vue'
 
-import '@/utils/filters'
+import * as filters from '@/filters' // global filters
 import '@/utils/directives'
 import '@/utils/extend'
 

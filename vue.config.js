@@ -26,6 +26,16 @@ module.exports = {
       skipWaiting: true
     }
   },
+  configureWebpack: {
+    // provide the app's title in webpack's name field, so that
+    // it can be accessed in index.html to inject the correct title.
+    name: 'account-manage-front',
+    resolve: {
+      alias: {
+        '@': resolve('src')
+      }
+    }
+  },
   pluginOptions: {
     scaffold: {
       // 用于引入svg图标到.vue文件
