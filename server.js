@@ -20,7 +20,7 @@ app.use((ctx, next) => {
 })
 
 // 静态资源处理
-app.use(rewrite(/^\/namespace\/([^?]+)(\?.+)?$/, '/$1'))
+app.use(rewrite(/^\/account-manage-front\/([^?]+)(\?.+)?$/, '/$1'))
 
 // 预渲染生成页面的目录
 app.use(serve('./dist/prerendered'))

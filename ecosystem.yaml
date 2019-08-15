@@ -1,0 +1,21 @@
+apps:
+  - script: app.js
+    name: AccountManageFront
+    env:
+      COMMON_VARIABLE: true
+    env_production:
+      NODE_ENV: production
+deploy:
+  production:
+    user: zwl
+    host:
+      - 47.108.79.109
+    port: '39999'
+    ref: origin/master
+    repo: https://github.com/zhaowenlin/account-manage-front.git
+    path: /var/www/account-manage-front/production
+    ssh_options: StrictHostKeyChecking=no
+    pre-deploy: git fetch --all
+    post-deploy: 'npm i --dev && npm run build'
+    env:
+      NODE_ENV: production
